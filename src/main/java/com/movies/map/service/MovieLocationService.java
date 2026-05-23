@@ -1,6 +1,7 @@
 package com.movies.map.service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
@@ -30,6 +31,17 @@ public class MovieLocationService {
     public List<MovieLocation> filterByTitle(String title){
         return getAllMovies().stream()
                 .filter(movie -> movie.getTitle() != null && movie.getTitle().toLowerCase().contains(title.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
+    public List<String> autocomplete(String prefix){
+        return getAllMovies().stream()
+                .map(MovieLocation::getTitle)
+                .filter(Objects::nonNull)
+                .filter(t -> t.toLowerCase().startsWith(prefix.toLowerCase()))
+                .distinct()
+                .sorted()
+                .limit(10)
                 .collect(Collectors.toList());
     }
 }

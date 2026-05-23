@@ -28,4 +28,10 @@ public class MovieController {
                     .orElseGet(service::getAllMovies);
     }
 
+    @GetMapping("/autocomplete")
+    public List<String> autocomplete(@RequestParam("q") String prefix) {
+        return new String();
+    }
+    
+
 }
