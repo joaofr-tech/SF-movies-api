@@ -15,7 +15,7 @@ public class MovieLocationService {
 
     public MovieLocationService(WebClient.Builder builder){
         this.webClient = builder
-                            .baseUrl("https://data.sfgov.org/api/v3/views/yitu-d5am/query.json")
+                            .baseUrl("https://data.sfgov.org/resource/yitu-d5am.json")
                             .build();
     }
 
