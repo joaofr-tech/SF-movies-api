@@ -115,6 +115,6 @@ src/main/java/com/movies/map
 
 O arquivo `src/docs/rest.http` pode ser usado em editores como VS Code ou IntelliJ para testar chamadas HTTP manualmente.
 
-## Status
+## Motivo
 
 Projeto em desenvolvimento para praticar consumo de API externa, criacao de endpoints REST e organizacao de uma aplicacao Spring Boot.
