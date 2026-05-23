@@ -30,7 +30,7 @@ public class MovieController {
 
     @GetMapping("/autocomplete")
     public List<String> autocomplete(@RequestParam("q") String prefix) {
-        return new String();
+        return service.autocomplete(prefix);
     }
     
 
